@@ -1,5 +1,8 @@
 package selfhomeworkLoLService.LoLservice.domain;
 
+import lombok.Data;
+
+@Data
 public class Summonerdomain {
     public int profileIconId;
     public String name;
