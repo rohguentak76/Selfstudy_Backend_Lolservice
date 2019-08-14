@@ -16,13 +16,16 @@ public class Lolservice {
     LolserviceapiClient lolserviceapiClient;
     @Autowired
     private Lolpositionrepository lolpositionrepository;
+
     public Summonerdomain getSummonerdomain(String summonerName) {
         return lolserviceapiClient.requestSummonerdomain(summonerName);
     }
     public List<Encrypedinfo> getLeaguepositionByencrypedsummonerName(String summonerName){
         String encrypedId = getSummonerdomain(summonerName).getId();
         List<Encrypedinfo> encrypedinfoList = lolserviceapiClient.requestleagueposition(encrypedId);
-        lolpositionrepository.insertLolposition(encrypedinfoList);
+        lolpositionrepository.setnamefordb(encrypedinfoList);
+        lolpositionrepository.updateLolposition(encrypedinfoList);
         return encrypedinfoList;
     }
+
 }
