@@ -12,7 +12,7 @@ import java.util.List;
 
 @Service
 public class LolserviceapiClient {
-    private final String appid = "RGAPI-782a0a2c-ce4d-44a9-9a8d-0cdebc38751b";
+    private final String appid = "RGAPI-be9832ab-fe9e-4a5c-8176-ce175ff6a07d";
     private final String summonerUrl = "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/{summonerName}?api_key={appid}";
     private final String encrypedUrl = "https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/{encrypedId}?api_key={appid}";
     @Autowired
