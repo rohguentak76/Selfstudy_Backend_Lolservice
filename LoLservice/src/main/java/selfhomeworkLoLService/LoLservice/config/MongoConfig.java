@@ -9,6 +9,6 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 public class MongoConfig {
     @Bean
     public MongoTemplate creatMongoTemplate(){
-        return new MongoTemplate(new MongoClient(),"current-weather");
+        return new MongoTemplate(new MongoClient(),"Db-to-leagueposition");
     }
 }
